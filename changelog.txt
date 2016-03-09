@@ -1,2 +1,5 @@
-#Time			#Message			#User
-3/8/2016 @ 4:10pm: 	Initial creation & setup	Carson Roscoe
+#Time					#Message																	#User
+					
+					
+3/8/2016 @ 5:17pm:		Mostly finished DTD file, Carson to finish up element connection			Jaegar Sarauer								
+3/8/2016 @ 4:10pm: 		Initial creation & setup													Carson Roscoe
