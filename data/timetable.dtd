@@ -21,12 +21,12 @@
   classTitle CDATA #REQUIRED
 >
 
-<!ELEMENT booking (specificTimeslot, specificCourse, specificDay, room, instructor, classType)>
+<!ELEMENT booking (specificTimeslot, specificCourse, specificDay, room, instructor)>
 <!ATTLIST booking 
+ classType (Lecture | Lab | LectureLab) #REQUIRED
 >
 <!ELEMENT room (#PCDATA)>
 <!ELEMENT instructor (#PCDATA)>
-<!ELEMENT classType (#PCDATA)>
 <!ELEMENT specificDay (#PCDATA)>
 <!ELEMENT specificTimeslot (#PCDATA)>
 <!ELEMENT specificCourse (#PCDATA)>
