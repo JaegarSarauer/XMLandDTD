@@ -24,3 +24,21 @@ class Timetable extends CI_Model {
         }
     }
 }
+
+class Booking extends CI_Model {
+    public $classType;
+    public $room;
+    public $instructor;
+    public $time;
+    public $day;
+    public $course;
+    
+    public function __construct($b) {
+        $this->classType = $b['classType'];
+        $this->room = $b['room'];
+        $this->instructor = $b['instructor'];
+        $this->time = $b['time'];
+        $this->day = $b['day'];
+        $this->course = $b['course'];
+    }
+}
