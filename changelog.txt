@@ -1,0 +1,6 @@
+#Time					#Message																	#User
+					
+3/8/2016 @ 6:16pm:		Finished XML example file using DTD file									Jaegar Sarauer								
+3/8/2016 @ 5:40pm: 		Modified DTD to utilize common booking element								Carson Roscoe
+3/8/2016 @ 5:17pm:		Mostly finished DTD file, Carson to finish up element connection			Jaegar Sarauer								
+3/8/2016 @ 4:10pm: 		Initial creation & setup													Carson Roscoe

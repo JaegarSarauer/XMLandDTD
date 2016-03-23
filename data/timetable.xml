@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE timestable SYSTEM "timetable.dtd">
+
+<timestable year="2016" term="4">
+  <day date="Monday">
+    <booking classType="Lecture">
+      <specificTimeslot>"11:30"</specificTimeslot>
+      <specificCourse>"COMP 4111"</specificCourse>
+      <specificDay>"Monday"</specificDay>
+      <room>"SE45 456"</room>
+      <instructor>"Mr. Marsby"</instructor>
+    </booking>
+  </day>
+  <timeslot time="11:30">
+    <booking classType="Lab">
+      <specificTimeslot>"11:30"</specificTimeslot>
+      <specificCourse>"COMP 4111"</specificCourse>
+      <specificDay>"Monday"</specificDay>
+      <room>"SE45 456"</room>
+      <instructor>"Mr. Marsby"</instructor>
+    </booking>
+  </timeslot>
+  <course classNumber="COMP 4111" classTitle="Essentials of Attending Class">
+    <booking classType="Lecture">
+      <specificTimeslot>"11:30"</specificTimeslot>
+      <specificCourse>"COMP 4111"</specificCourse>
+      <specificDay>"Monday"</specificDay>
+      <room>"SE45 456"</room>
+      <instructor>"Mr. Marsby"</instructor>
+    </booking>
+  </course>
+</timestable>
