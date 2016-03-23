@@ -1,3 +1,6 @@
 #Time					#Message																	#User
 					
-3/22/2016 @ 5:03pm:		Created timetable model														Jaegar Sarauer								
+3/22/2016 @ 5:25pm:                     Created booking model
+3/22/2016 @ 5:03pm:     		Created timetable model														Jaegar Sarauer								
+3/22/2016 @ 5:30pm:                     Defined datapath
+3/22/2016 @ 4:00pm:                     Added codeigniter starter
