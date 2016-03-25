@@ -3,30 +3,30 @@
 
 <timestable year="2016" term="4">
   <day date="Monday">
-    <booking classType="Lecture">
-      <specificTimeslot>"11:30"</specificTimeslot>
-      <specificCourse>"COMP 4111"</specificCourse>
-      <specificDay>"Monday"</specificDay>
+      
+    <booking classtype="Lecture">
+      <timeslot>"11:30"</timeslot>
+      <course>"COMP 4111"</course>
       <room>"SE45 456"</room>
-      <instructor>"Mr. Marsby"</instructor>
+      <instructor>"Mr. Flippy"</instructor>
+      <class>COMP4711</class>
     </booking>
+    
+    <booking classtype="Lab">
+      <timeslot>"12:30"</timeslot>
+      <course>"COMP 4132"</course>
+      <room>"SE45 453"</room>
+      <instructor>"Mrs. Salsa"</instructor>
+      <class>COMP4560</class>
+    </booking>
+
+    <booking classtype="Lecture">
+      <timeslot>"14:30"</timeslot>
+      <course>"COMP 4111"</course>
+      <room>"SE45 452"</room>
+      <instructor>"Mr. Marsby"</instructor>
+      <class>COMP4735</class>
+    </booking>
+    
   </day>
-  <timeslot time="11:30">
-    <booking classType="Lab">
-      <specificTimeslot>"11:30"</specificTimeslot>
-      <specificCourse>"COMP 4111"</specificCourse>
-      <specificDay>"Monday"</specificDay>
-      <room>"SE45 456"</room>
-      <instructor>"Mr. Marsby"</instructor>
-    </booking>
-  </timeslot>
-  <course classNumber="COMP 4111" classTitle="Essentials of Attending Class">
-    <booking classType="Lecture">
-      <specificTimeslot>"11:30"</specificTimeslot>
-      <specificCourse>"COMP 4111"</specificCourse>
-      <specificDay>"Monday"</specificDay>
-      <room>"SE45 456"</room>
-      <instructor>"Mr. Marsby"</instructor>
-    </booking>
-  </course>
 </timestable>
