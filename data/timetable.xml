@@ -2,31 +2,80 @@
 <!DOCTYPE timestable SYSTEM "timetable.dtd">
 
 <timestable year="2016" term="4">
-  <day date="Monday">
-      
-    <booking classtype="Lecture">
-      <timeslot>"11:30"</timeslot>
-      <course>"COMP 4111"</course>
-      <room>"SE45 456"</room>
-      <instructor>"Mr. Flippy"</instructor>
-      <class>COMP4711</class>
-    </booking>
-    
-    <booking classtype="Lab">
-      <timeslot>"12:30"</timeslot>
-      <course>"COMP 4132"</course>
-      <room>"SE45 453"</room>
-      <instructor>"Mrs. Salsa"</instructor>
-      <class>COMP4560</class>
-    </booking>
+  <days>
+    <day date="Monday">
+      <booking classtype="Lecture">
+        <timeslot>11:30-12:30</timeslot>
+        <course>COMP4111</course>
+        <room>SE45 456</room>
+        <instructor>Mr. Flippy</instructor>
+      </booking>
 
-    <booking classtype="Lecture">
-      <timeslot>"14:30"</timeslot>
-      <course>"COMP 4111"</course>
-      <room>"SE45 452"</room>
-      <instructor>"Mr. Marsby"</instructor>
-      <class>COMP4735</class>
-    </booking>
-    
-  </day>
+      <booking classtype="Lab">
+        <timeslot>12:30-13:30</timeslot>
+        <course>COMP4135</course>
+        <room>SE45 453</room>
+        <instructor>Mrs. Salsa</instructor>
+      </booking>
+
+      <booking classtype="Lecture">
+        <timeslot>14:30-15:30</timeslot>
+        <course>COMP4111</course>
+        <room>SE45 452</room>
+        <instructor>Mr. Marsby</instructor>
+      </booking>
+    </day>
+  </days>
+  
+  <timeslots>
+    <timeslot time="11:30-12:30">
+      <booking classtype="Lecture">
+        <course>COMP4111</course>
+        <room>SE45 456</room>
+        <instructor>Mr. Flippy</instructor>
+        <day>Tuesday</day>
+      </booking>
+    </timeslot>
+    <timeslot time="12:30-13:30">
+      <booking classtype="Lab">
+        <course>COMP4135</course>
+        <room>SE45 453</room>
+        <instructor>Mrs. Salsa</instructor>
+        <day>Tuesday</day>
+      </booking>
+    </timeslot>
+    <timeslot time="14:30-15:30">
+      <booking classtype="Lecture">
+        <course>COMP4111</course>
+        <room>SE45 452</room>
+        <instructor>Mr. Marsby</instructor>
+        <day>Tuesday</day>
+      </booking>
+    </timeslot>
+  </timeslots>
+  
+  <courses>
+    <course course="COMP4111">
+      <booking classtype="Lecture">
+        <timeslot>11:30-12:30</timeslot>
+        <room>SE45 456</room>
+        <instructor>Mr. Flippy</instructor>
+        <day>Tuesday</day>
+      </booking>
+      <booking classtype="Lecture">
+        <timeslot>14:30-15:30</timeslot>
+        <room>SE45 452</room>
+        <instructor>Mr. Marsby</instructor>
+        <day>Tuesday</day>
+      </booking>
+    </course>
+    <course course="COMP4135">
+      <booking classtype="Lab">
+        <timeslot>12:30-13:30</timeslot>
+        <room>SE45 453</room>
+        <instructor>Mrs. Salsa</instructor>
+        <day>Tuesday</day>
+      </booking>
+    </course>
+  </timeslots>
 </timestable>
