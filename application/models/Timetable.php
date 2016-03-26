@@ -58,16 +58,82 @@ class Timetable extends CI_Model {
         }
     }
     
-    public function getCourses() {
-        return $this->courses;
+    public function getPossibleDays() {
+        $days = array(
+            'Monday' => 'Monday',
+            'Tuesday' => 'Tuesday',
+            'Wednesday' => 'Wednesday',
+            'Thursday' => 'Thursday',
+            'Friday' => 'Friday'
+        );
+        return $days;
     }
     
-    public function getTimeslots() {
-        return $this->timeslots;
+    public function getPossibleTimes() {
+        $time = array (
+            "8:30-10:30" => "8:30-10:30",
+            "8:30-11:30" => "8:30-11:30",
+            "9:30-10:30" => "9:30-10:30",
+            "9:30-11:30" => "9:30-11:30",
+            "10:30-11:30" => "10:30-11:30",
+            "10:30-12:30" => "10:30-12:30",
+            "11:30-12:30" => "11:30-12:30",
+            "11:30-1:30" => "11:30-1:30",
+            "12:30-1:30" => "12:30-1:30",
+            "12:30-2:30" => "12:30-12:30",
+            "1:30-2:30" => "1:30-2:30",
+            "1:30-3:30" => "1:30-3:30",
+            "2:30-3:30" => "2:30-3:30",
+            "2:30-4:30" => "2:30-4:30",
+            "3:30-4:30" => "3:30-4:30",
+            "3:30-5:30" => "3:30-5:30",
+            "4:30-5:30" => "4:30-5:30"
+        );
+        return $time;
     }
     
-    public function getDays() {
-        return $this->days;
+    public function getPossibleCourses() {
+        $courses = array (
+            "COMP4111" => "COMP4111",
+            "COMP4135" => "COMP4135"
+        );
+        return $courses;
+    }
+    
+    public function getCourses($time = null, $day = null, $course = null) {
+        $result = array();
+        foreach($this->courses as $booking) {
+            if (($time == null || $booking->timeslot == $time) && 
+                    ($day == null || $booking->day == $day) && 
+                    ($course == null || $booking->course == $course)) {
+                array_push($result, $booking);
+            }
+        }
+        return $result;
+    }
+    
+    public function getTimeslots($time = null, $day = null, $course = null) {
+        $result = array();
+        foreach($this->timeslots as $booking){
+            if (($time == null || $booking->timeslot == $time) && 
+                    ($day == null || $booking->day == $day) && 
+                    ($course == null || $booking->course == $course)) {
+                array_push($result, $booking);
+            }
+        }
+        return $result;
+    }
+    
+    public function getDays($time = null, $day = null, $course = null) {
+        $result = array();
+        foreach($this->days as $booking){
+            if (($time == null || $booking->timeslot == $time) && 
+                    ($day == null || $booking->day == $day) && 
+                    ($course == null || $booking->course == $course)) {
+                array_push($result, $booking);
+            }
+        }
+        return $result;
     }
 }
 
