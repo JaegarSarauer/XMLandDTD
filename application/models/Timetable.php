@@ -14,57 +14,52 @@ class Timetable extends CI_Model {
     
     public function __construct() {
         parent::__construct();
-        $this->xml = simplexml_load_file(DATAPATH . 'data/timetable.xml');
-        
+        $this->xml = simplexml_load_file(DATAPATH . 'timetable.xml');
         //Days perspective
-        foreach($this->xml->days as $day) {
+        foreach($this->xml->days->day as $day) {
             foreach($day->booking as $book) {
                 $tmp = array();
-                $tmp['day'] = (string) $book['date'];
+                $tmp['day'] = (string) $day['date'];
                 $tmp['classtype'] = (string) $book['classtype'];
-                $tmp['timeslot'] = (string) $book['timeslot'];
-                $tmp['course'] = (string) $book['course'];
-                $tmp['room'] = (string) $book['room'];
-                $tmp['instructor'] = (string) $book['instructor'];
-                $tmp['class'] = (string) $book['class'];
+                $tmp['timeslot'] = (string) $book->timeslot;
+                $tmp['course'] = (string) $book->course;
+                $tmp['room'] = (string) $book->room;
+                $tmp['instructor'] = (string) $book->instructor;
                 $this->days[] = new Booking($tmp);
-                
             }
         }
         
         //Courses perspective
-        foreach($this->xml->courses as $course) {
+        foreach($this->xml->courses->course as $course) {
             foreach($course->booking as $book) {
                 $tmp = array();
-                $tmp['day'] = (string) $book['date'];
+                $tmp['day'] = (string) $book->day;
                 $tmp['classtype'] = (string) $book['classtype'];
-                $tmp['timeslot'] = (string) $book['timeslot'];
-                $tmp['course'] = (string) $book['course'];
-                $tmp['room'] = (string) $book['room'];
-                $tmp['instructor'] = (string) $book['instructor'];
-                $tmp['class'] = (string) $book['class'];
+                $tmp['timeslot'] = (string) $book->timeslot;
+                $tmp['course'] = (string) $course['course'];
+                $tmp['room'] = (string) $book->room;
+                $tmp['instructor'] = (string) $book->instructor;
                 $this->courses[] = new Booking($tmp);
             }
         }
         
         //Timeslot perspective
-        foreach($this->xml->timeslots as $timeslot) {
+        foreach($this->xml->timeslots->timeslot as $timeslot) {
             foreach($timeslot->booking as $book) {
                 $tmp = array();
-                $tmp['day'] = (string) $book['date'];
+                $tmp['day'] = (string) $book->day;
                 $tmp['classtype'] = (string) $book['classtype'];
-                $tmp['timeslot'] = (string) $book['timeslot'];
-                $tmp['course'] = (string) $book['course'];
-                $tmp['room'] = (string) $book['room'];
-                $tmp['instructor'] = (string) $book['instructor'];
-                $tmp['class'] = (string) $book['class'];
+                $tmp['timeslot'] = (string) $timeslot['time'];
+                $tmp['course'] = (string) $book->course;
+                $tmp['room'] = (string) $book->room;
+                $tmp['instructor'] = (string) $book->instructor;
                 $this->timeslots[] = new Booking($tmp);
             }
         }
     }
     
     public function getCourses() {
-        return $this->course;
+        return $this->courses;
     }
     
     public function getTimeslots() {
@@ -83,7 +78,6 @@ class Booking extends CI_Model {
     public $course;
     public $room;
     public $instructor;
-    public $class;
     
     public function __construct($b) {
         $this->day = $b['day'];
@@ -92,6 +86,5 @@ class Booking extends CI_Model {
         $this->course = $b['course'];
         $this->room = $b['room'];
         $this->instructor = $b['instructor'];
-        $this->class = $b['class'];
     }
 }
