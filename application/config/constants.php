@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-defined('DATAPATH', './data/');
+define('DATAPATH', './data/');
 
 /*
 |--------------------------------------------------------------------------
