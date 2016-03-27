@@ -9,6 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<style type="text/css"></style>
 </head>
 <body>
+    {pickday} {picktime} {pickcourse}
     {content}
 </body>
 </html>
