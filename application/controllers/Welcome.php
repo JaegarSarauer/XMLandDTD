@@ -17,13 +17,16 @@ class Welcome extends Application {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
-    public function index($time = null, $day = null, $course = null){
-        if ($day == "All")
+    public function index($day = null, $time = null, $course = null){
+        if ($day == "All") {
             $day = null;
-        if ($time == "All")
+        }
+        if ($time == "All") {
             $time = null;
-        if ($course == "All")
+        }
+        if ($course == "All") {
             $course = null;
+        }
         //$this->load->view('tables');
         $this->data['pagebody'] = 'tables';
        // var_dump($this->timetable->getDays());

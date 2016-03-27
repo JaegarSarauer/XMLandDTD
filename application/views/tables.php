@@ -1,5 +1,6 @@
 <div id="mainDiv" class="well">
-    {pickday} {picktime} {pickcourse}
+    {pickday} {picktime} {pickcourse} 
+    <form action="javascript:search();"><input type="submit" value="Submit"></form>
     <table class="table" id="table1">
         <tr><th class="title" colspan="6">{table1title}</th></tr>
         {table1names}

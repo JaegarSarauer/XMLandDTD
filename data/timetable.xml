@@ -3,7 +3,7 @@
 
 <timestable year="2016" term="4">
   <days>
-    <day date="Monday">
+    <day date="Tuesday">
       <booking classtype="Lecture">
         <timeslot>11:30-12:30</timeslot>
         <course>COMP4111</course>
