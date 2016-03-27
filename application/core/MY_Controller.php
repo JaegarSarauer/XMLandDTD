@@ -35,7 +35,7 @@ class Application extends CI_Controller {
     function getColumnNames($data) {
         $result = '<tr>';
         if(count($data) < 1)
-            return "Error parsing Columns";
+            return "Error parsing data";
         $inner = ((array)$data[0]);
         while (list($key, $val) = each($inner)) {
             $result .= '<td class="header">' . $key  . '</td>';

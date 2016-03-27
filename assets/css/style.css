@@ -3,13 +3,17 @@
     text-align: center;
 }
 
+h1 {
+    text-align: center;
+}
+
 .title {
     font-weight: bold;
     font-size: 30px;
     text-align: center;
 }
 
-#mainDiv {
+.tableHolder {
     text-align: center;
     width: 80%;
     margin: 30px;

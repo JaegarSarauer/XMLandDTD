@@ -1,5 +1,6 @@
-#Time					#Message		
-3/27/2016 @ 1:39                Added searching functionality															#User
+#Time					#Message																	#User
+3/27/2016 @ 2:07		BINGO! Queries are displayed properly										Jaegar Sarauer
+3/27/2016 @ 1:39        Added searching functionality												Coscoe Roscan			
 3/27/2016 @ 0:35		Bootstrapped the website													Jaegar Sarauer	
 3/25/2016 @ 6:46		Parsing XML using model to views											Jaegar Sarauer	
 3/25/2016 @ 4:01pm:		Changed XML,DTD, Booking and timestable model to work properly				Jaegar Sarauer								
