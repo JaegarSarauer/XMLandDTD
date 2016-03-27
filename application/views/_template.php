@@ -6,12 +6,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta charset="utf-8">
 	<title>{pageTitle}</title>
 
-	<style type="text/css"></style>
         <link rel="stylesheet" href="<?php echo base_url("assets/css/style.css"); ?>" />
         <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
 </head>
 <body>
     {content}
+    <script type="text/javascript" src="<?php echo base_url("assets/js/search.js"); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery-2.2.2.min.js"); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.js"); ?>"></script>
 </body>

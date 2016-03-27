@@ -18,21 +18,6 @@ class Welcome extends Application {
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
     public function index($day = null, $time = null, $course = null){
-        if ($day != null) {
-            $_SESSION['day'] = $day;
-        } else {
-            $_SESSION['day'] = "All";
-        }
-        if ($time != null) {
-            $_SESSION['time'] = $time;
-        } else {
-            $_SESSION['time'] = "All";
-        }
-        if ($course != null) {
-            $_SESSION['course'] = $time;
-        } else {
-            $_SESSION['course'] = "All";
-        }
         if ($day == "All") {
             $day = null;
         }

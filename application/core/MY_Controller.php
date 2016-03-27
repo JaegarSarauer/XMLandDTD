@@ -65,8 +65,8 @@ class Application extends CI_Controller {
             $URI = $arr[0].'/'.$arr[1];
         }
         //populates the dropdown & if you change the item it will reload page
-        $result = '<select class="dropdown" onchange="window.location=\''."http://$_SERVER[HTTP_HOST]$URI".'\' + this.value;">';
-        $result .= '<option value="all">All</option>';
+        $result = '<select class="dropdown" onchange="setData();">';
+        $result .= '<option value="All">All</option>';
         foreach($this->timetable->getPossibleDays() as $key => $value) {
             $result .= '<option value="'.$key.'">'.$key. '</option>';
         }
@@ -82,8 +82,8 @@ class Application extends CI_Controller {
             $URI = $arr[0].'/'.$arr[1];
         }
         //populates the dropdown & if you change the item it will reload page
-        $result = '<select class="dropdown"  onchange="window.location=\''."http://$_SERVER[HTTP_HOST]$URI".'\' + this.value;">';
-        $result .= '<option value="all">All</option>';
+        $result = '<select class="dropdown"  onchange="setData();">';
+        $result .= '<option value="All">All</option>';
         foreach($this->timetable->getPossibleTimes() as $key => $value) {
             $result .= '<option value="'.$key.'">'.$key. '</option>';
         }
@@ -99,8 +99,8 @@ class Application extends CI_Controller {
             $URI = $arr[0].'/'.$arr[1];
         }
         //populates the dropdown & if you change the item it will reload page
-        $result = '<select class="form-group"  onchange="window.location=\''."http://$_SERVER[HTTP_HOST]$URI".'\' + this.value;">';
-        $result .= '<option value="all">All</option>';
+        $result = '<select class="dropdown"  onchange="setData();">';
+        $result .= '<option value="All">All</option>';
         foreach($this->timetable->getPossibleCourses() as $key => $value) {
             $result .= '<option value="'.$key.'">'.$key. '</option>';
         }
