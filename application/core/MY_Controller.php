@@ -33,12 +33,12 @@ class Application extends CI_Controller {
     }
 
     function getColumnNames($data) {
-        $result = "";
+        $result = '<tr>';
         if(count($data) < 1)
             return "Error parsing Columns";
         $inner = ((array)$data[0]);
         while (list($key, $val) = each($inner)) {
-            $result .= '<td>' . $key  . '</td>';
+            $result .= '<td class="header">' . $key  . '</td>';
         }
         $result .= '</tr>';
         return $result;
@@ -65,7 +65,7 @@ class Application extends CI_Controller {
             $URI = $arr[0].'/'.$arr[1];
         }
         //populates the dropdown & if you change the item it will reload page
-        $result = '<select onchange="window.location=\''."http://$_SERVER[HTTP_HOST]$URI".'\' + this.value;">';
+        $result = '<select class="dropdown" onchange="window.location=\''."http://$_SERVER[HTTP_HOST]$URI".'\' + this.value;">';
         $result .= '<option value="all">All</option>';
         foreach($this->timetable->getPossibleDays() as $key => $value) {
             $result .= '<option value="'.$key.'">'.$key. '</option>';
@@ -82,7 +82,7 @@ class Application extends CI_Controller {
             $URI = $arr[0].'/'.$arr[1];
         }
         //populates the dropdown & if you change the item it will reload page
-        $result = '<select onchange="window.location=\''."http://$_SERVER[HTTP_HOST]$URI".'\' + this.value;">';
+        $result = '<select class="dropdown"  onchange="window.location=\''."http://$_SERVER[HTTP_HOST]$URI".'\' + this.value;">';
         $result .= '<option value="all">All</option>';
         foreach($this->timetable->getPossibleTimes() as $key => $value) {
             $result .= '<option value="'.$key.'">'.$key. '</option>';
@@ -99,7 +99,7 @@ class Application extends CI_Controller {
             $URI = $arr[0].'/'.$arr[1];
         }
         //populates the dropdown & if you change the item it will reload page
-        $result = '<select onchange="window.location=\''."http://$_SERVER[HTTP_HOST]$URI".'\' + this.value;">';
+        $result = '<select class="form-group"  onchange="window.location=\''."http://$_SERVER[HTTP_HOST]$URI".'\' + this.value;">';
         $result .= '<option value="all">All</option>';
         foreach($this->timetable->getPossibleCourses() as $key => $value) {
             $result .= '<option value="'.$key.'">'.$key. '</option>';
