@@ -28,12 +28,15 @@ class Welcome extends Application {
         $this->data['pagebody'] = 'tables';
        // var_dump($this->timetable->getDays());
        // var_dump($this->timetable->getTimeslots());
+        $this->data['table1title'] = "Courses Faucet";
         $this->data['table1names'] = $this->getColumnNames($this->timetable->getCourses($time, $day, $course));
         $this->data['table1'] = $this->parseToTable($this->timetable->getCourses($time, $day, $course));
 
+        $this->data['table2title'] = "Timeslots Faucet";
         $this->data['table2names'] = $this->getColumnNames($this->timetable->getTimeslots($time, $day, $course));
         $this->data['table2'] = $this->parseToTable($this->timetable->getTimeslots($time, $day, $course));
 
+        $this->data['table3title'] = "Days Faucet";
         $this->data['table3names'] = $this->getColumnNames($this->timetable->getDays($time, $day, $course));
         $this->data['table3'] = $this->parseToTable($this->timetable->getDays($time, $day, $course));
 
