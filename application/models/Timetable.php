@@ -89,7 +89,7 @@ class Timetable extends CI_Model {
             "3:30-5:30" => "3:30-5:30",
             "4:30-5:30" => "4:30-5:30"
         );
-        return $time;
+        return $time;   
     }
     
     public function getPossibleCourses() {
