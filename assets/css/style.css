@@ -1,0 +1,19 @@
+.header {
+    font-weight: bold;
+    text-align: center;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+#mainDiv {
+    text-align: center;
+    width: 80%;
+    margin: 30px;
+    margin-right: auto; 
+    margin-left: auto; 
+    width: 800px; 
+}
